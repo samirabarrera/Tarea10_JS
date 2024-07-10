@@ -11,29 +11,29 @@ const lightY = parseInt(inputs[1]); // the Y position of the light of power
 const initialTx = parseInt(inputs[4]); // Thor's starting X position
 const initialTy = parseInt(inputs[2]); // Thor's starting Y position
 
-var thorX = "initialTX";
-var thorY = "initialTY";
-var directionX = "";
-var directionY = "";
+let thorX = "initialTX";
+let thorY = "initialTY";
 
 // game loop
 while (true) {
-    var remainingTurns = parseInt(readline());
+    let remainingTurns = parseInt(readline());
+    let directionX = "";
+    let directionY = "";
     
-    if (thorX > lightX) {
-        directionX = "W";
-        thorX--;
-    } else if (thorX < lightX) {
-        directionX = "E";
-        thorX++;
-    }
-
     if (thorY > lightY) {
         directionY = "N";
-        thorY--;
-    } else if (thorY < lightY){
+        thorY === thorY - 1;
+    } else if (thorY < lightY) {
         directionY = "S";
-        thorY++;
+        thorY === thorY +1;
+    }
+
+    if (thorX > lightX) {
+        directionX = "W";
+        thorX === thorX -1;
+    } else if (thorX < lightX){
+        directionY = "E";
+        thorX === thorX +1;
     }    
 
     // Write an action using print()
