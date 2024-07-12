@@ -8,8 +8,8 @@
 var inputs = readline().split(' ');
 const lightX = parseInt(inputs[0]); // the X position of the light of power
 const lightY = parseInt(inputs[1]); // the Y position of the light of power
-const initialTx = parseInt(inputs[4]); // Thor's starting X position
-const initialTy = parseInt(inputs[2]); // Thor's starting Y position
+const initialTx = parseInt(inputs[2]); // Thor's starting X position
+const initialTy = parseInt(inputs[3]); // Thor's starting Y position
 
 var thorX = initialTx;
 var thorY = initialTy;
@@ -21,22 +21,23 @@ while (true) {
     var directionX = "";
     var directionY = "";
     
+    if (thorY > lightY) {
+        directionY = "N";
+        thorY--;
+    } else if (thorY < lightY) {
+        directionY = "S";
+        thorY++;
+    }
+
     if (thorX > lightX) {
         directionX = "W";
         thorX--;
     } else if (thorX < lightX) {
         directionX = "E";
         thorX++;
-    }
-
-    if (thorY > lightY) {
-        directionY = "N";
-        thorY--;
-    } else if (thorY < lightY){
-        directionY = "S";
-        thorY++;
-    }    
-}
+    }  
+    
     // Write an action using print()
     // To debug: printErr('Debug messages...');
-    print(directionY + directionX); // A single line providing the move to be made: N NE 
+    print(directionY.concat(directionX));
+}
