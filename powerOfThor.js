@@ -11,8 +11,8 @@ const lightY = parseInt(inputs[1]); // the Y position of the light of power
 const initialTx = parseInt(inputs[4]); // Thor's starting X position
 const initialTy = parseInt(inputs[2]); // Thor's starting Y position
 
-var thorX = initialTX;
-var thorY = initialTY;
+var thorX = initialTx;
+var thorY = initialTy;
 
 // game loop
 while (true) {
