@@ -36,8 +36,5 @@ while (true) {
         directionX = "E";
         thorX++;
     }  
-    
-    // Write an action using print()
-    // To debug: printErr('Debug messages...');
     print(directionY.concat(directionX));
 }
